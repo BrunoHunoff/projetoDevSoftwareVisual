@@ -1,0 +1,52 @@
+# Compiled object files
+*.o
+*.obj
+*.lo
+*.la
+*.al
+*.dll
+*.exe
+*.so
+*.dylib
+*.lib
+
+# Build Directories
+bin/
+obj/
+
+# User-specific files
+*.rsuser
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Logs
+*.log
+
+# NuGet
+*.nupkg
+*.snupkg
+.nuget/
+packages/
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# Entity Framework Migrations
+Migrations/
+
+# Visual Studio
+.vscode/
+.vs/
+.idea/
+
+# Rider
+.idea/
+*.sln.iml
+
+# User-generated files
+*.DS_Store
+Thumbs.db
+*.class
+*.pyc
