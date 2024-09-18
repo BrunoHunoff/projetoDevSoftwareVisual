@@ -2,17 +2,23 @@ using Microsoft.EntityFrameworkCore;
 
 public class AppDataBase : DbContext
 {
-
+   public AppDataBase(DbContextOptions<AppDataBase> options)
+        : base(options)
+    {
+    }
     //Configuração da conexão
-    protected override void OnConfiguring(DbContextOptionsBuilder builder)
+    protected override void OnConfiguring(
+        DbContextOptionsBuilder builder)
     {
         //configuração de acesso ao banco local
+        string con = "server=localhost;port=3306;" + 
+        "database=RH;user=root;password=arnaldo";
 
         ////substituir "password" pela sua senha local
-        builder.UseMySQL("server=localhost;port=3306;database=exemplo;user=root;password=Local1234");
-
+        builder.UseMySQL(con)
+       .LogTo(Console.WriteLine, LogLevel.Information);
     }
 
-
+public DbSet<Cargo> Cargos => Set<Cargo>();
 
 }
