@@ -10,7 +10,7 @@ public class Contrato {
 
     public override string ToString(){
         return 
-        $"Id: {Id}, TipoContrato: {TipoContrato}, DataInicio: {DataInicio}, DataFim: {DataFim}, Observacoes: {Observacoes}";
+        $"Id: {Id}, TipoContrato: {TipoContrato}, DataInicio: {DataInicio}, DataFim: {DataFim}";
     }
 
 }

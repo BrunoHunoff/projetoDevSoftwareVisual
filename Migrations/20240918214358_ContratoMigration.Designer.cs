@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ProjetoApiSoftwareVisual.Migrations
 {
     [DbContext(typeof(AppDataBase))]
-    [Migration("20240918203630_ContratosMigration")]
-    partial class ContratosMigration
+    [Migration("20240918214358_ContratoMigration")]
+    partial class ContratoMigration
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -20,22 +20,6 @@ namespace ProjetoApiSoftwareVisual.Migrations
             modelBuilder
                 .HasAnnotation("ProductVersion", "8.0.8")
                 .HasAnnotation("Relational:MaxIdentifierLength", 64);
-
-            modelBuilder.Entity("Beneficios", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    b.Property<int?>("ContratoId")
-                        .HasColumnType("int");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("ContratoId");
-
-                    b.ToTable("Beneficios");
-                });
 
             modelBuilder.Entity("Contrato", b =>
                 {
@@ -59,18 +43,6 @@ namespace ProjetoApiSoftwareVisual.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Contratos");
-                });
-
-            modelBuilder.Entity("Beneficios", b =>
-                {
-                    b.HasOne("Contrato", null)
-                        .WithMany("Beneficios")
-                        .HasForeignKey("ContratoId");
-                });
-
-            modelBuilder.Entity("Contrato", b =>
-                {
-                    b.Navigation("Beneficios");
                 });
 #pragma warning restore 612, 618
         }

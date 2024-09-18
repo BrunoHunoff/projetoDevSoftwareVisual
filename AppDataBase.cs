@@ -14,6 +14,5 @@ public class AppDataBase : DbContext
     }
 
     public DbSet<Contrato> Contratos { get; set; }
-    public DbSet<Beneficios> Beneficios { get; set; }
 
 }

@@ -18,17 +18,6 @@ namespace ProjetoApiSoftwareVisual.Migrations
                 .HasAnnotation("ProductVersion", "8.0.8")
                 .HasAnnotation("Relational:MaxIdentifierLength", 64);
 
-            modelBuilder.Entity("Beneficios", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Beneficios");
-                });
-
             modelBuilder.Entity("Contrato", b =>
                 {
                     b.Property<int>("Id")
