@@ -9,6 +9,5 @@ app.MapGet("/", () => "Hello World!");
 app.Run();
 
 
-
 app.UseSwagger();
 app.UseSwaggerUI();
