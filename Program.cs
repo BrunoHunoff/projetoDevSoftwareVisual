@@ -1,11 +1,10 @@
-using System.Data.Common;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
-
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
 
 builder.Services.AddDbContext<AppDataBase>();
 
@@ -17,5 +16,6 @@ app.UseSwaggerUI();
 app.MapGet("/", () => "API");
 
 ConfigurarRotasCargo.MapRotas(app);
+app.MapContratosApi();
 
 app.Run();
