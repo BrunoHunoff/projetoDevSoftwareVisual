@@ -17,7 +17,7 @@ Content-Type: application/json
 
 
 ### PUT /Cargos
-PUT http://localhost:5078/Cargos/4
+PUT http://localhost:5078/Cargos/7
 Content-Type: application/json
 
 {
@@ -28,4 +28,4 @@ Content-Type: application/json
 }
 
 ### DELETE /Cargos/{id}
-DELETE http://localhost:5078/Cargos/2
+DELETE http://localhost:5078/Cargos/7
