@@ -1,0 +1,31 @@
+### GET /Cargos
+GET http://localhost:5078/Cargos
+
+### GET /Cargos/{id}
+GET http://localhost:5078/Cargos/4
+
+### POST /Cargos
+POST http://localhost:5078/Cargos
+Content-Type: application/json
+
+{
+  "nome": "engenheiro",
+  "descricao": "de software",
+  "salarioBase": 2.000,
+  "departamento": "TI"
+}
+
+
+### PUT /Cargos
+PUT http://localhost:5078/Cargos/7
+Content-Type: application/json
+
+{
+  "nome": "Contador",
+  "descricao": "pagamentos",
+  "salarioBase": 5.0,
+  "departamento": "Financeiro"
+}
+
+### DELETE /Cargos/{id}
+DELETE http://localhost:5078/Cargos/7

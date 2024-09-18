@@ -13,8 +13,9 @@ var app = builder.Build();
 app.UseSwagger();
 app.UseSwaggerUI();
 
-
 app.MapGet("/", () => "API");
+
+ConfigurarRotasCargo.MapRotas(app);
 app.MapContratosApi();
 
 app.Run();
