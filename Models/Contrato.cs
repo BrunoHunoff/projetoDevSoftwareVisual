@@ -1,13 +1,13 @@
 public class Contrato {
-    private int Id {get; set;}
-    private String TipoContrato {get; set;}
-    private DateTime DataInicio {get; set;}
+    public int Id {get; set;}
+    public String TipoContrato {get; set;}
+    public DateTime DataInicio {get; set;}
 
-    private DateTime DataFim {get; set;}
+    public DateTime DataFim {get; set;}
 
-    private String? Observacoes {get; set;}
+    public String? Observacoes {get; set;}
 
-    private List<Beneficios>? Beneficios {get; set;}
+    public List<Beneficios>? Beneficios {get; set;}
 
     public override string ToString(){
         return 

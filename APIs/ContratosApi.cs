@@ -22,7 +22,11 @@ public static class ContratosApi {
 
 
         //POST
-
+        group.MapPost("/", async (AppDataBase db, Contrato contrato) => {
+            db.Contratos.Add(contrato);
+            await db.SaveChangesAsync();
+            return Results.Created($"/contratos/{contrato.Id}", contrato);
+        });
         //UPDATE
 
         //DELETE
