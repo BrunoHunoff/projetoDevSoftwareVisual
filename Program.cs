@@ -1,14 +1,20 @@
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
-var app = builder.Build();
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-app.MapGet("/", () => "Hello World!");
 
-app.Run();
+builder.Services.AddDbContext<AppDataBase>();
 
-
+var app = builder.Build();
 
 app.UseSwagger();
 app.UseSwaggerUI();
+
+
+app.MapGet("/", () => "API");
+app.MapContratosApi();
+
+app.Run();
