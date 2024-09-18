@@ -13,6 +13,6 @@ public class AppDataBase : DbContext
 
     }
 
-
+    public DbSet<Contrato> Contratos { get; set; }
 
 }

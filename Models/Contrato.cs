@@ -1,5 +1,5 @@
 public class Contrato {
-    private String Id {get; set;}
+    private int Id {get; set;}
     private String TipoContrato {get; set;}
     private DateTime DataInicio {get; set;}
 
