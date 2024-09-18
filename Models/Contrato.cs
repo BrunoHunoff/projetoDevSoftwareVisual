@@ -7,11 +7,10 @@ public class Contrato {
 
     public String? Observacoes {get; set;}
 
-    public List<Beneficios>? Beneficios {get; set;}
 
     public override string ToString(){
         return 
-        $"Id: {Id}, TipoContrato: {TipoContrato}, DataInicio: {DataInicio}, DataFim: {DataFim}, Observacoes: {Observacoes}, Beneficios: {Beneficios}";
+        $"Id: {Id}, TipoContrato: {TipoContrato}, DataInicio: {DataInicio}, DataFim: {DataFim}, Observacoes: {Observacoes}";
     }
 
 }

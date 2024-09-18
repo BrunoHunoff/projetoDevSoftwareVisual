@@ -1,2 +1,31 @@
 ### GET /contratos
-GET httpL//localhost:
+GET http://localhost:5078/contratos
+
+###GET /contratos/{id}
+GET http://localhost:5078/contratos/1
+
+###POST /contratos
+POST http://localhost:5078/contratos
+Content-Type: application/json
+
+{
+  "tipoContrato": "PJ",
+  "dataInicio": "2024-01-01T00:00:00",
+  "dataFim": "2025-01-01T00:00:00",
+  "observacoes": "Contrato anual"
+}
+
+###PUT /contratos/{id}
+PUT http://localhost:5078/2
+Content-Type: application/json
+
+{
+  "tipoContrato": "PJ new",
+  "dataInicio": "2024-01-01T00:00:00",
+  "dataFim": "2025-01-01T00:00:00",
+  "observacoes": "Contrato anual"
+}
+
+###DELETE /contratos/{id}
+DELETE http://localhost:5078/contratos/1
+
