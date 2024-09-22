@@ -17,5 +17,6 @@ app.MapGet("/", () => "API");
 
 ConfigurarRotasCargo.MapRotas(app);
 app.MapContratosApi();
+app.MapDepartamentoApi();
 
 app.Run();
