@@ -15,6 +15,8 @@ public class AppDataBase : DbContext
 
     public DbSet<Contrato> Contratos { get; set; }
     public DbSet<Departamento> Departamentos{ get; set; }
+
+    public DbSet<Ferias> Ferias {get; set;}
     
 
 }
