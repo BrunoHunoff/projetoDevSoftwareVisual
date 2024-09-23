@@ -32,12 +32,15 @@ public static class DepartamentoApi {
         });
 
         //DELETE
-        group.MapDelete("/departamentos/{id}", async(AppDataBase db, int id) =>
-        
-            await db.Departamentos.FindAsync(id) is Departamento departamento
-            ? Results.Ok(db.Departamentos.Remove(departamento))
-            : Results.NotFound()
-        );
+        group.MapDelete("/departamentos/{id}", async(AppDataBase db, int id) => {{
+
+            if(await db.Departamentos.FindAsync(id) is Departamento departamento) {
+                db.Remove(departamento);
+                await db.SaveChangesAsync();
+                return Results.NoContent();
+            }
+            return Results.NotFound();
+        }});
 
         //PUT
         group.MapPut("/departamentos/{id}", async(AppDataBase db, int id, Departamento departamentoAlterado) =>
@@ -47,6 +50,8 @@ public static class DepartamentoApi {
 
             departamento.NomeDepartamento = departamentoAlterado.NomeDepartamento;
             departamento.Descricao = departamentoAlterado.Descricao;
+
+            await db.SaveChangesAsync();
 
             return Results.NoContent();   
         });
