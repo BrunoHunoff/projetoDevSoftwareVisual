@@ -41,7 +41,7 @@ public static class ContratosApi {
         group.MapPut("/{id}", async (AppDataBase db,int id, Contrato contratoAlterado) => {
             var contrato = await db.Contratos.FindAsync(id);
 
-            if(contrato == null) return Results.NotFound();
+            if(contrato is null) return Results.NotFound();
             
             contrato.TipoContrato = contratoAlterado.TipoContrato;
             contrato.DataInicio = contratoAlterado.DataInicio;
