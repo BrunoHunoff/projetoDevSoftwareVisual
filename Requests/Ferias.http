@@ -1,0 +1,30 @@
+### GET /Ferias
+GET http://localhost:5078/Ferias
+
+### GET /Ferias/{id}
+GET http://localhost:5078/Ferias/4
+
+### POST /Ferias
+POST http://localhost:5078/Ferias
+Content-Type: application/json
+
+{
+  "dataInicio": "2024-01-01T00:00:00",
+  "dataFim": "2024-01-15T00:00:00",
+  "funcionarioId": 3,
+  "observacoes": "Férias de 15 dias"
+}
+
+### PUT/Ferias{id}
+http://localhost:5078/Ferias/{id}
+Content-Type: application/json
+
+{
+  "dataInicio": "2024-02-01T00:00:00",
+  "dataFim": "2024-02-10T00:00:00",
+  "funcionarioId": 3,
+  "observacoes": "Mudança de datas de férias"
+}
+
+### DELETE /Ferias/{id}
+DELETE http://localhost:5078/Ferias/7
