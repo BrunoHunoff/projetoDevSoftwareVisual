@@ -1,10 +1,10 @@
-# GET
+### GET
 GET http://localhost:5078/departamentos
 
-# GET{ID}
+### GET{ID}
 GET http://localhost:5078/departamentos/1
 
-# POST
+### POST
 POST http://localhost:5078/departamentos
 Content-Type: application/json
 
@@ -13,7 +13,7 @@ Content-Type: application/json
   "descricao": "Possui 5 funcionários"
 }
 
-# PUT /departamentos/id
+### PUT /departamentos/id
 PUT http://localhost:5078/departamentos/1
 Content-Type: application/json
 
@@ -22,5 +22,5 @@ Content-Type: application/json
   "descricao": "Possui 1 funcionário"
 }
 
-# DELETE /departamentos/{id}
+### DELETE /departamentos/{id}
 DELETE http://localhost:5078/departamentos/1
