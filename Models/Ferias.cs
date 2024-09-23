@@ -10,7 +10,7 @@ public class Ferias
 
     public int FuncionarioId { get; set; }
     
-    public Funcionario? Funcionario { get; set; }  
+    //public Funcionario? Funcionario { get; set; }  
 
     public string? Observacoes { get; set; }
 
