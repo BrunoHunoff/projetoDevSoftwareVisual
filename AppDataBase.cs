@@ -19,5 +19,6 @@ public class AppDataBase : DbContext
     public DbSet<Ferias> Ferias {get; set;}
     public DbSet<Cargo> Cargos { get; set; }
     public DbSet<Funcionario> Funcionarios { get; set; }
+    public DbSet<HistoricoSalario> HistoricoSalarios {get; set;}
 
 }
