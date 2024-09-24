@@ -20,5 +20,6 @@ app.MapContratosApi();
 app.MapDepartamentoApi();
 app.MapBeneficiosApi();
 app.MapFeriasApi();
+app.MapFuncionarioApi();
 
 app.Run();
