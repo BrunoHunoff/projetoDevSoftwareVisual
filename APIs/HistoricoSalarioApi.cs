@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore;
 
 public static class HistoricoSalarioApi {
 
-    public static void  (this WebApplication app){
+    public static void  MapHistoricoSalarioApi(this WebApplication app){
         var group = app.MapGroup("/historico-salario");
 
         //Lista todas os salarios
@@ -47,6 +47,7 @@ public static class HistoricoSalarioApi {
             historicosalario.DataAlteracao = SalarioNovo.DataAlteracao;
             historicosalario.SalarioNovo = SalarioNovo.SalarioNovo;
             historicosalario.FuncionarioId = SalarioNovo.FuncionarioId;
+            historicosalario.MotivoAlteracao = SalarioNovo.MotivoAlteracao;
 
             await db.SaveChangesAsync();
 
