@@ -18,5 +18,7 @@ app.MapGet("/", () => "API");
 app.MapRotas();
 app.MapContratosApi();
 app.MapDepartamentoApi();
+app.MapBeneficiosApi();
+app.MapFeriasApi();
 
 app.Run();
