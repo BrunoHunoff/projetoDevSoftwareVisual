@@ -7,7 +7,7 @@ public static class FuncionarioApi
     public static void MapFuncionarioApi(WebApplication app)
     {
         app.MapGet("/Funcionario", async (AppDataBase db) =>
-            await db.Funcionarios.ToListAsync()
+            await db.Funcionarios.ToListiAsync()
         );
 
         app.MapGet("/Funcionario/{id}", async (int id, AppDataBase db) =>
