@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -9,37 +10,16 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ProjetoApiSoftwareVisual.Migrations
 {
     [DbContext(typeof(AppDataBase))]
-    partial class AppDataBaseModelSnapshot : ModelSnapshot
+    [Migration("20240922002221_DepartamentoMigration")]
+    partial class DepartamentoMigration
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
                 .HasAnnotation("ProductVersion", "8.0.8")
                 .HasAnnotation("Relational:MaxIdentifierLength", 64);
-
-            modelBuilder.Entity("Cargo", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    b.Property<string>("departamento")
-                        .HasColumnType("longtext");
-
-                    b.Property<string>("descricao")
-                        .HasColumnType("longtext");
-
-                    b.Property<string>("nome")
-                        .HasColumnType("longtext");
-
-                    b.Property<double>("salarioBase")
-                        .HasColumnType("double");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Cargos");
-                });
 
             modelBuilder.Entity("Contrato", b =>
                 {

@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 
 public static class ConfigurarRotasCargo
 {
-    public static void MapRotas(WebApplication app)
+    public static void MapRotas(this WebApplication app)
     {
         app.MapGet("/Cargos", async (AppDataBase db) =>
             await db.Cargos.ToListAsync());
