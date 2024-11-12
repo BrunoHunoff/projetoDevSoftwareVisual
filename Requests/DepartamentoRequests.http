@@ -10,7 +10,7 @@ Content-Type: application/json
 
 {
   "nomeDepartamento": "Financeiro",
-  "descricao": "Possui 5 funcionários"
+  "descricao": "Possui 78 funcionários"
 }
 
 ### PUT /departamentos/id

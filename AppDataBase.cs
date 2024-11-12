@@ -9,7 +9,7 @@ public class AppDataBase : DbContext
         //configuração de acesso ao banco local
 
         ////substituir "password" pela sua senha local
-        builder.UseMySQL("server=localhost;port=3306;database=svApi;user=root;password=Local1234");
+        builder.UseMySQL("server=localhost;port=3306;database=svApi;user=root;password=marcelha");
 
     }
 
