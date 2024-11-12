@@ -4,11 +4,17 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-
-
 builder.Services.AddDbContext<AppDataBase>();
 
+builder.Services.AddCors();
+
 var app = builder.Build();
+
+app.UseCors(policy => policy
+    .AllowAnyOrigin()
+    .AllowAnyHeader()
+    .AllowAnyMethod()
+);
 
 app.UseSwagger();
 app.UseSwaggerUI();
