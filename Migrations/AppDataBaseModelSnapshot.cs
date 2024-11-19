@@ -187,6 +187,27 @@ namespace ProjetoApiSoftwareVisual.Migrations
 
                     b.ToTable("HistoricoSalarios");
                 });
+
+            modelBuilder.Entity("Ponto", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("HoraEntrada")
+                        .HasColumnType("datetime(6)");
+
+                    b.Property<DateTime>("HoraSaida")
+                        .HasColumnType("datetime(6)");
+
+                    b.Property<string>("NomeFuncionario")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Pontos");
+                });
 #pragma warning restore 612, 618
         }
     }

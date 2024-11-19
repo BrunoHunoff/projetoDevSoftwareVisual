@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ProjetoApiSoftwareVisual.Migrations
 {
     [DbContext(typeof(AppDataBase))]
-    [Migration("20240924222101_final")]
-    partial class final
+    [Migration("20241118230715_Ponto")]
+    partial class Ponto
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -189,6 +189,27 @@ namespace ProjetoApiSoftwareVisual.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("HistoricoSalarios");
+                });
+
+            modelBuilder.Entity("Ponto", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("HoraEntrada")
+                        .HasColumnType("datetime(6)");
+
+                    b.Property<DateTime>("HoraSaida")
+                        .HasColumnType("datetime(6)");
+
+                    b.Property<string>("NomeFuncionario")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Pontos");
                 });
 #pragma warning restore 612, 618
         }
