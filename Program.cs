@@ -28,5 +28,6 @@ app.MapBeneficiosApi();
 app.MapFeriasApi();
 app.MapFuncionarioApi();
 app.MapHistoricoSalarioApi();
+app.MapPontoApi();
 
 app.Run();

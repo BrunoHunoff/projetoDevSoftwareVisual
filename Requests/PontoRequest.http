@@ -1,0 +1,29 @@
+### GET
+GET http://localhost:5078/pontos
+
+### GET{ID}
+GET http://localhost:5078/pontos/1
+
+### POST
+POST http://localhost:5078/pontos
+Content-Type: application/json
+
+{
+  "NomeFuncionario": "tobias",
+  "HoraEntrada": "2024-01-01T00:00:00",
+  "HoraSaida": "2024-01-01T00:00:00"
+}
+
+### PUT /departamentos/id
+PUT http://localhost:5078/pontos/1
+Content-Type: application/json
+
+{
+  "NomeFuncionario": "Cássio",
+  "HoraEntrada": "2024-01-01T00:00:00",
+  "HoraSaida": "2024-01-01T00:00:00"
+}
+
+### DELETE /departamentos/{id}
+DELETE http://localhost:5078/pontos/2
+
